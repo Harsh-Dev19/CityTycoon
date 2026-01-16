@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>City Tycoon — Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1>City Tycoon</h1>
+      <div class="top-controls">
+        <button id="btn-pause">Pause</button>
+        <button id="btn-save">Save</button>
+        <button id="btn-load">Load</button>
+        <button id="btn-reset">Reset</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="game-area">
+        <canvas id="city-canvas" width="640" height="448"></canvas>
+        <div class="hud">
+          <div id="msg" class="msg">Welcome to City Tycoon — place buildings from the right panel.</div>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div class="stats card">
+          <div class="stat-row"><span>Money</span><strong id="money">$0</strong></div>
+          <div class="stat-row"><span>Population</span><strong id="population">0</strong></div>
+          <div class="stat-row"><span>Happiness</span><strong id="happiness">0%</strong></div>
+          <div class="stat-row"><span>Energy</span><strong id="energy">0</strong></div>
+          <div class="stat-row"><span>Tick</span><strong id="tick-status">Running</strong></div>
+        </div>
+
+        <div class="buildings card">
+          <h3>Buildings (Press 1–4)</h3>
+          <div id="build-list" class="build-list"></div>
+        </div>
+
+        <div class="help card">
+          <h3>Controls</h3>
+          <ul>
+            <li><strong>Left Click</strong> place building</li>
+            <li><strong>Right Click</strong> demolish (refund 50%)</li>
+            <li><strong>1-4</strong> select building</li>
+            <li><strong>Space</strong> pause / resume</li>
+            <li><strong>S</strong> save, <strong>L</strong> load, <strong>R</strong> reset</li>
+          </ul>
+        </div>
+
+        <div class="footer card small">
+          <small>Made with ♥ — open-source demo</small>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
